@@ -4,6 +4,14 @@ body {
   font-weight: bold;
   margin: 0;
 }
+h2 {
+  text-align: center;
+}
+h6 {
+  text-align: center;
+  margin: 7px;
+}
+
 nav{
   background: silver;
   grid-area: nav;
@@ -12,7 +20,6 @@ ul{
   list-style-type: none;
   padding: 0px;
   margin: 15px;
-
 
 }
 li{
@@ -45,12 +52,65 @@ li a:hover{
   color: ghostwhite;
 }
 /* Classes */
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.flexitem {
+  border: 1px solid black;
+  width: 25%;
+  height: 30%;
+  margin: 15px;
+  background-color: #EDE0D4;
+
+}
+
+.projektimg {
+  max-width: 100%;
+  height: auto;
+  margin: 0px;
+}
+.flexitem1 {
+  border: 1px solid black;
+  width: 25%;
+  height: 30%;
+  margin: 0px;
+  background-color: #EDE0D4;
+}
+.projektimg1 {
+  max-width: 100%;
+  height: auto;
+  margin: 0px;
+}
+.sprite {
+	width: 500px;
+	height: 500px;
+	background: url('miganimate2.png') 0 0 no-repeat;
+	animation: play 3s steps(5) infinite;
+}
+@keyframes play {
+	0%{background-position:0px;}
+   100% { background-position: -2500px; }
+}
+
 
 .container {
   display:grid;
   height:100vh;
   grid-template-rows: 3fr 0.5fr;
   grid-template-columns: 0.5fr 1.5fr 1.5fr;
+  grid-template-areas:
+  "nav main content"
+  "footer footer footer";
+}
+.container2 {
+  display:grid;
+  height:100vh;
+  grid-template-rows: 3fr 0.5fr;
+  grid-template-columns: 0.5fr 3fr;
   grid-template-areas:
   "nav main content"
   "footer footer footer";
@@ -62,6 +122,14 @@ li a:hover{
 .tekst {
   word-spacing: 4px;
 }
+.projekttekst{
+  text-align: center;
+}
+.projekt1p {
+  text-align: center;
+
+}
+
 .content {
  background: ghostwhite;
   grid-area: content;
